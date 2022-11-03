@@ -1,4 +1,3 @@
-<powershell>
 New-NetFirewallRule -Name "SMB445" -DisplayName "SMB445" -Protocol TCP -LocalPort 445
 New-NetFirewallRule -Name "WINRM5986" -DisplayName "WINRM5986" -Protocol TCP -LocalPort 5986
 
@@ -30,4 +29,3 @@ $DestStore.Close()
 winrm create winrm/config/listener?Address=*+Transport=HTTPS `@`{CertificateThumbprint=`"($cert.Thumbprint)`"`}
 
 Restart-Service winrm
-</powershell>
